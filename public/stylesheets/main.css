@@ -1,0 +1,16 @@
+.jumbotron {
+  background: black;
+  color: white;
+  padding-bottom: 80px; }
+.jumbotron .btn-primary {
+  background: grey;
+  border-color: grey; }
+.jumbotron .btn-primary:hover {
+  background: red; }
+.jumbotron p {
+  color: #d4d1da;
+  max-width: 75%;
+  margin: 1em auto 2em; }
+.navbar + .jumbotron {
+  margin-top: -20px; }
+  

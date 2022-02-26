@@ -1,0 +1,63 @@
+<h1>Detail information</h1>
+<head>
+
+    <style>
+        .lines{
+            padding: 2px;
+            border: solid 1px black;
+            float:left;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+
+
+</head>
+
+
+<h2><%= name %></h2>
+<div>
+    <form action="/rectangles", method="get">
+        <div class="lines">Name</div>
+        <div class="lines"><%= name %></div>
+        <br>
+        <br>
+        <div class="lines">Width</div>
+        <div class="lines"><%= width %></div>
+        <br>
+        <br>
+        <div class="lines">Height</div>
+        <div class="lines"><%= height %></div>
+        <br>
+        <br>
+        <div class="lines">Color</div>
+        <div class="lines"><%= color %></div>
+        <br>
+        <br>
+        <input type="submit" value="Delete"/>
+    </form>
+</div>
+
+<form action="return", method="get">
+    <input type="submit" value="Return"/>
+</form>
+
+
+<form action="/detail" method="post">
+    <label for="name">name</label>
+    <input type="text" name="iname" id="name" />
+    <label for="width">width</label>
+    <input type="text" name="iwidth" id="width" />
+    <label for="height">height</label>
+    <input type="text" name="iheight" id="height" />
+    <label for="color">color</label>
+    <input type="text" name="icolor" id="color" />
+    
+
+    <input type="submit">
+</form>
+
+
+
+
+

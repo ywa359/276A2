@@ -1,0 +1,50 @@
+<html>
+<head>
+    <style>
+        table,th,td{
+            border-collapse: collapse;
+            border: solid 2px rgb(247, 242, 242);
+            width: 800px;
+        }
+    </style>
+    <title>hyper links</title>
+</head>>
+<body>
+    <h1>Show all rectangles</h1>
+    <h3> Rectangle</h3>
+    <table>
+        <tr>
+            <th>name</th>
+            <th>width</th>
+            <th>height</th>
+            <th>color</th>
+            <!-- <th>detail</th> -->
+        </tr>
+        <% results.rows.forEach(function(r) { %>
+            <form id="formname" action="/detail" method="get">
+                <tr>
+                    <td><input name="name" type="submit" value="<%= r.name %>"></td>
+                    <td><input name="width" type="hidden" value="<%= r.width %>"></td>
+                    <td><input name="height" type="hidden" value="<%= r.height %>"></td>
+                    <td><input name="color" type="hidden" value="<%= r.color %>"><%= r.color %></td>
+                </tr>
+            </form>
+        <% }); %>
+    </table>
+    <br>
+    <h1>Add Rectangles</h1>
+    <form action="/rectangles" method="post">
+        <label for="name">name</label>
+        <input type="text" name="iname" id="name" />
+        <label for="width">width</label>
+        <input type="text" name="iwidth" id="width" />
+        <label for="height">height</label>
+        <input type="text" name="iheight" id="height" />
+        <label for="color">color</label>
+        <input type="text" name="icolor" id="color" />
+        <input type="submit" value="Add"/>
+    </form>
+</body>
+
+</html>
+
